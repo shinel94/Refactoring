@@ -21,9 +21,9 @@ def renderPlainText(data):
     return result
 
 
-def main():
-    invoice = json.load(open('./data/invoices.json'))
-    plays = json.load(open('./data/plays.json'))
+def main(invoice_path, plays_path):
+    invoice = json.load(open(invoice_path))
+    plays = json.load(open(plays_path))
     return statement(invoice, plays)
 
 

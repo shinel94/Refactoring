@@ -24,6 +24,10 @@ def createPerformanceCalculator(aPerformance, aPlay):
         return TragedyCalculator(aPerformance, aPlay)
     elif aPlay["type"] == "comedy":
         return ComedyCalculator(aPerformance, aPlay)
+    elif aPlay["type"] == 'crime':
+        return CrimeCalculator(aPerformance, aPlay)
+    else:
+        raise NotImplementedError
 
 
 class PerformanceCalculator:
@@ -61,4 +65,15 @@ class ComedyCalculator(PerformanceCalculator):
     def volumeCreditsFor(self):
         return super(ComedyCalculator, self).volumeCreditsFor() + self.performance["audience"] // 5
 
-    
+
+class CrimeCalculator(PerformanceCalculator):
+
+    def amountFor(self):
+        result = 50000
+        if self.performance["audience"] > 30:
+            result += 25000 + 1000 * (self.performance["audience"] - 30)
+        result += 500 * self.performance["audience"]
+        return result
+
+    def volumeCreditsFor(self):
+        return super(CrimeCalculator, self).volumeCreditsFor() + self.performance["audience"] // 3

@@ -17,11 +17,18 @@ def statement(invoice, plays):
             if perf["audience"] > 20:
                 thisAmount += 10000 + 500*(perf["audience"] - 20)
             thisAmount += 300 * perf["audience"]
+        elif play["type"] == 'crime':
+            thisAmount = 50000
+            if perf["audience"] > 30:
+                thisAmount += 25000 + 1000*(perf["audience"] - 30)
+            thisAmount += 500 * perf["audience"]
         else:
             raise ValueError(f'알 수 없는 장르: {play["type"]}')
         volumeCredicts += max(perf["audience"] - 30, 0)
         if play["type"] == "comedy":
             volumeCredicts += perf["audience"] // 5
+        elif play["type"] == 'crime':
+            volumeCredicts += perf["audience"] // 3
         result += f' {play["name"]} : {format_(thisAmount/100)} ({perf["audience"]}석)\n'
         totalAmount += thisAmount
     result += f'총액: {format_(totalAmount/100)}\n'
@@ -29,9 +36,9 @@ def statement(invoice, plays):
     return result
 
 
-def main():
-    invoice = json.load(open('./data/invoices.json'))
-    plays = json.load(open('./data/plays.json'))
+def main(invoice_path, plays_path):
+    invoice = json.load(open(invoice_path))
+    plays = json.load(open(plays_path))
     return statement(invoice, plays)
 
 
