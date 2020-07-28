@@ -1,5 +1,20 @@
 import json
 
+def amountFor(perf, play):
+    thisAmount = 0
+    if play["type"] == 'tragedy':
+        thisAmount = 40000
+        if perf["audience"] > 30:
+            thisAmount += 1000 * (perf["audience"] - 30)
+    elif play["type"] == 'comedy':
+        thisAmount = 30000
+        if perf["audience"] > 20:
+            thisAmount += 10000 + 500 * (perf["audience"] - 20)
+        thisAmount += 300 * perf["audience"]
+    else:
+        raise ValueError(f'알 수 없는 장르: {play["type"]}')
+    return thisAmount
+
 def statement(invoice, plays):
     totalAmount = 0
     volumeCredicts = 0
@@ -7,18 +22,9 @@ def statement(invoice, plays):
     format_ = lambda cent_value: f"${cent_value:,.2f}"
     for perf in invoice["performances"]:
         play = plays[perf["playID"]]
-        thisAmount = 0
-        if play["type"] == 'tragedy':
-            thisAmount = 40000
-            if perf["audience"] > 30:
-                thisAmount += 1000 * (perf["audience"] - 30)
-        elif play["type"] == 'comedy':
-            thisAmount = 30000
-            if perf["audience"] > 20:
-                thisAmount += 10000 + 500*(perf["audience"] - 20)
-            thisAmount += 300 * perf["audience"]
-        else:
-            raise ValueError(f'알 수 없는 장르: {play["type"]}')
+
+        thisAmount = amountFor(perf, play)
+
         volumeCredicts += max(perf["audience"] - 30, 0)
         if play["type"] == "comedy":
             volumeCredicts += perf["audience"] // 5
