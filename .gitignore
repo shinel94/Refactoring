@@ -1,5 +1,6 @@
 *.pyc
 *.pyi
 __pycache__
-.idea
+/idea
 */__pycache__
+.gitignore
