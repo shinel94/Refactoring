@@ -1,8 +1,6 @@
 import json
 
 
-
-
 def statement(invoice, plays):
 
     def playFor(aPerformance):
@@ -24,22 +22,35 @@ def statement(invoice, plays):
         return result
 
     def volumeCreditsFor(aPerformance):
-        volumeCredits = 0
-        volumeCredits += max(aPerformance["audience"] - 30, 0)
+        result = 0
+        result += max(aPerformance["audience"] - 30, 0)
         if playFor(aPerformance)["type"] == "comedy":
-            volumeCredits += aPerformance["audience"] // 5
-        return volumeCredits
+            result += aPerformance["audience"] // 5
+        return result
 
-    totalAmount = 0
-    volumeCredits = 0
-    result = f'청구 내역 (고객 명 : {invoice["customer"]})\n'
+    def totalVolumeCredits():
+        result = 0
+        for perf in invoice["performances"]:
+            result += volumeCreditsFor(perf)
+        return result
+
+    def totalAmount():
+        result = 0
+        for perf in invoice["performances"]:
+            result += amountFor(perf)
+        return result
+
     num2usd = lambda cent_value: f"${cent_value/100:,.2f}"
+
+    ##### main statement code #####
+    result = f'청구 내역 (고객 명 : {invoice["customer"]})\n'
+
     for perf in invoice["performances"]:
-        volumeCredits += volumeCreditsFor(perf)
         result += f' {playFor(perf)["name"]} : {num2usd(amountFor(perf))} ({perf["audience"]}석)\n'
-        totalAmount += amountFor(perf)
-    result += f'총액: {num2usd(totalAmount)}\n'
-    result += f'적립 포인트: {volumeCredits}점\n'
+
+    result += f'총액: {num2usd(totalAmount())}\n'
+    result += f'적립 포인트: {totalVolumeCredits()}점\n'
+    
     return result
 
 
