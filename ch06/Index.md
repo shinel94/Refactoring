@@ -1,6 +1,6 @@
 ﻿- [x] (1) 함수 추출하기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch06/ExtractFunction.ipynb)
 - [x] (2) 함수 인라인하기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch06/InlineFunction.ipynb)
-- [ ] (3) 변수 추출하기 [Link]()
+- [x] (3) 변수 추출하기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch06/ExtractVariable.ipynb)
 - [ ] (4) 변수 인라인하기 [Link]()
 - [ ] (5) 함수 선언 바꾸기 [Link]()
 - [ ] (6) 변수 캡슐화하기 [Link]()
