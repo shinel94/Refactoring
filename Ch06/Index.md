@@ -1,4 +1,4 @@
-- [ ] (1) 함수 추출하기 [Link]()
+- [x] (1) 함수 추출하기 [Link](https://github.com/shinel94/Refactoring/blob/python/Ch06/ExtractFunction.ipynb)
 - [ ] (2) 함수 인라인하기 [Link]()
 - [ ] (3) 변수 추출하기 [Link]()
 - [ ] (4) 변수 인라인하기 [Link]()
