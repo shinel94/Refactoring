@@ -7,5 +7,5 @@
 - [x] (7) 변수 이름 바꾸기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch06/RenameVariable.ipynb)
 - [x] (8) 매개변수 객체 만들기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch06/IntroduceParameterObject.ipynb)
 - [x] (9) 여러 함수를 클래스로 묶기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch06/CombineFunctionsIntoClass.ipynb)
-- [ ] (10) 여러 함수를 변환 함수로 묶기 [Link]()
-- [ ] (11) 단계 쪼개기 [Link]()
+- [x] (10) 여러 함수를 변환 함수로 묶기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch06/CombineFunctionsIntoTransform.ipynb)
+- [x] (11) 단계 쪼개기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch06/SplitPhase.ipynb)
