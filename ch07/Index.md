@@ -1,6 +1,6 @@
 - [x] (1) 레코드 캡슐화하기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch07/EncapsulateRecord.ipynb)
-- [ ] (2) 컬렉션 캡슐화하기 [Link]()
-- [ ] (3) 기본형을 객체로 바꾸기 [Link]()
+- [x] (2) 컬렉션 캡슐화하기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch07/EncapsulateCollection.ipynb)
+- [x] (3) 기본형을 객체로 바꾸기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch07/ReplacePrimitiveWithObject.ipynb)
 - [ ] (4) 임시 변수를 질의 함수로 바꾸기 [Link]()
 - [ ] (5) 클래스 추출하기 [Link]()
 - [ ] (6) 클래스 인라인하기 [Link]()
