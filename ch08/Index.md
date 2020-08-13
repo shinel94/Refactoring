@@ -1,4 +1,4 @@
-- [ ] (1) 함수 옮기기 [Link]()
+- [x] (1) 함수 옮기기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch08/MoveFunction.ipynb)
 - [ ] (2) 필드 옮기기 [Link]()
 - [ ] (3) 문장을 함수로 옮기기 [Link]()
 - [ ] (4) 문장을 호출한 곳으로 옮기기 [Link]()
