@@ -1,6 +1,6 @@
 - [x] (1) 함수 옮기기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch08/MoveFunction.ipynb)
-- [ ] (2) 필드 옮기기 [Link]()
-- [ ] (3) 문장을 함수로 옮기기 [Link]()
+- [x] (2) 필드 옮기기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch08/MoveField.ipynb)
+- [x] (3) 문장을 함수로 옮기기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch08/MoveStatementsIntoFunction.ipynb)
 - [ ] (4) 문장을 호출한 곳으로 옮기기 [Link]()
 - [ ] (5) 인라인 코드를 함수 호출로 바꾸기 [Link]()
 - [ ] (6) 문장 슬라이스하기 [Link]()
