@@ -1,5 +1,5 @@
-- [ ] (1) 변수 쪼개기 [Link]()
-- [ ] (2) 필드 이름 바꾸기 [Link]()
+- [x] (1) 변수 쪼개기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch09/SplitVariable.ipynb)
+- [x] (2) 필드 이름 바꾸기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch09/RenameField.ipynb)
 - [ ] (3) 파생 변수를 질의 함수로 바꾸기 [Link]()
 - [ ] (4) 참조를 값으로 바꾸기 [Link]()
 - [ ] (5) 값을 찾로로 바꾸기 [Link]()
