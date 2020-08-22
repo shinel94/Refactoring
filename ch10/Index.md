@@ -1,4 +1,4 @@
-- [ ] (1) 조건문 분해하기 [Link]()
+- [x] (1) 조건문 분해하기 [Link](https://github.com/shinel94/Refactoring/blob/python/ch10/DecomposeConditional.ipynb)
 - [ ] (2) 조건식 통합하기 [Link]()
 - [ ] (3) 중첩 조건문을 보호 구문으로 바꾸기 [Link]()
 - [ ] (4) 조건부 로직을 다형성으로 바꾸기 [Link]()
